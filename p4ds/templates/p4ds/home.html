@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>메인 화면</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="open-popup">문제 풀기</button>
+
+    <script>
+        document.getElementById('open-popup').onclick = function() {
+            // 새로운 창을 열기 위해 window.open() 사용
+            window.open('/problem_solving/', 'PopupWindow', 'width=600,height=400');
+        };
+    </script>
+</body>
+
+</html>

@@ -16,7 +16,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from p4ds import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', views.home, name='home'),
+    path('problem_solving/', views.problem_solving_view, name='problem_solving_view'), 
+    # path('submit/', views.submit_data, name='submit_data'),
 ]
