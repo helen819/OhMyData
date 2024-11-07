@@ -1,0 +1,18 @@
+{% extends "p4ds/base_layout.html" %}
+{% load static %}
+
+{% block title %}Welcome to ReinforceMath{% endblock %}
+
+{% block content %}
+<section class="landing">
+    <!-- Image Container -->
+    <div class="landing-image">
+        <img src="{% static 'p4ds/images/landing-image.png' %}" alt="Learning Graphic">
+    </div>
+    <!-- Text Content Container -->
+    <div class="landing-content">
+        <h1>Welcome to ReinforceMath!</h1>
+        <p>ReinforceMath는 수학 학습 이력에 기반하여 문제를 생성 및 추천해 주는 적응형 학습 플랫폼입니다.</p>
+    </div>
+</section>
+{% endblock %}
