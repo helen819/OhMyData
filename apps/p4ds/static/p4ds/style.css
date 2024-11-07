@@ -1,0 +1,89 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #F8FCEE;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #057159;
+  padding: 10px 20px;
+  color: #ffffff;
+}
+header nav .logo {
+  display: flex;
+  align-items: center;
+}
+header nav .logo img {
+  height: 40px;
+  margin-right: 10px;
+}
+header nav .nav-links {
+  display: flex;
+  gap: 20px;
+}
+header nav .nav-links a {
+  color: #ffffff;
+  text-decoration: none;
+}
+header nav .auth-buttons a {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+header nav .auth-buttons a.login-btn {
+  background-color: transparent;
+  border: 1px solid #ffffff;
+}
+header nav .auth-buttons a.signup-btn {
+  background-color: #5ad4a1;
+  color: #ffffff;
+}
+
+.landing {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 50px;
+  gap: 20px;
+}
+.landing .landing-content {
+  flex: 1;
+  max-width: 500px;
+}
+.landing .landing-content h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+.landing .landing-content p {
+  max-width: 600px;
+  text-align: left;
+  color: #333;
+}
+.landing .landing-image {
+  flex: 1;
+  max-width: 400px;
+}
+.landing .landing-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .landing {
+    flex-direction: column;
+    text-align: center;
+  }
+  .landing .landing-content,
+  .landing .landing-image {
+    max-width: 100%;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

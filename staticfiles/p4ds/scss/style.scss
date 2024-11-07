@@ -1,0 +1,115 @@
+// Define color variables for easy maintenance
+$background-color: #f9f9f9;
+$text-color: #333;
+$header-bg-color: #264653;
+$signup-btn-color: #2a9d8f;
+$white: #ffffff;
+
+// General body styling
+body {
+    font-family: Arial, sans-serif;
+    background-color: $background-color;
+    color: $text-color;
+    margin: 0;
+    padding: 0;
+}
+
+// Header styling
+header {
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: $header-bg-color;
+        padding: 10px 20px;
+        color: $white;
+
+        .logo {
+            display: flex;
+            align-items: center;
+
+            img {
+                height: 40px;
+                margin-right: 10px;
+            }
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+
+            a {
+                color: $white;
+                text-decoration: none;
+            }
+        }
+
+        .auth-buttons {
+            a {
+                color: $white;
+                text-decoration: none;
+                padding: 5px 10px;
+                border-radius: 5px;
+
+                &.login-btn {
+                    background-color: transparent;
+                    border: 1px solid $white;
+                }
+
+                &.signup-btn {
+                    background-color: $signup-btn-color;
+                    color: $white;
+                }
+            }
+        }
+    }
+}
+
+// Landing Section styling
+.landing {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;  // Allows wrapping on smaller screens
+    padding: 50px;
+    gap: 20px;
+
+    .landing-content {
+        flex: 1;
+        max-width: 500px;
+
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        p {
+            max-width: 600px;
+            text-align: left;
+            color: $text-color;
+        }
+    }
+
+    .landing-image {
+        flex: 1;
+        max-width: 400px;
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    }
+}
+
+// Responsive Design
+@media (max-width: 768px) {
+    .landing {
+        flex-direction: column;  // Stacks elements vertically on small screens
+        text-align: center;
+
+        .landing-content,
+        .landing-image {
+            max-width: 100%;  // Full width for both elements
+        }
+    }
+}
