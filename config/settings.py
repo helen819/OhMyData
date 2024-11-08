@@ -28,8 +28,7 @@ SECRET_KEY = 'django-insecure-xq4smz#jvl=46rn@ur4e8q24&w*v3quk_pw916ci$56p%a(wx^
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-
+ALLOWED_HOSTS = ['*'] 
 
 # Application definition
 
@@ -80,11 +79,18 @@ WSGI_APPLICATION = 'config.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        # 'ENGINE': 'django.db.backends.sqlite3',
+        # 'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'OhMyData',                   # 생성한 데이터베이스 이름
+        'USER': 'postgres',                   # 생성한 사용자 이름
+        'PASSWORD': '$D/&gK[N=@eVC4Eb',       # 설정한 비밀번호
+        'HOST': '34.47.104.73',               # PostgreSQL 서버 호스트 (로컬의 경우 localhost)
+        'PORT': '5432',                       # PostgreSQL 기본 포트
     }
 }
 
+AUTH_USER_MODEL = 'p4ds.Users' # 앱명.모델명
 
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
