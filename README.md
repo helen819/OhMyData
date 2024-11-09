@@ -20,3 +20,8 @@ analytics: 분석 기능
 * page template을 위한 base layout 파일을 만들고(header, footer 등을 포함시키는 기본 틀), 이를 extend하여 각 템플릿을 제작함.
 
 * 기본 css 대신 sass를 사용하여 편의성을 높임(`pip install sass`, `pip install django-sass-processor` 필요)
+
+### 필수 라이브러리 설치
+```
+pip install -r requirements.txt
+```
